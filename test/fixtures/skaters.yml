@@ -4,6 +4,7 @@ one:
   name: MyString
   stance: MyString
   sponsor: MyString
+  hometown: MyString
   profile: MyString
   full_shot: MyString
 
@@ -11,5 +12,6 @@ two:
   name: MyString
   stance: MyString
   sponsor: MyString
+  hometown: MyString
   profile: MyString
   full_shot: MyString

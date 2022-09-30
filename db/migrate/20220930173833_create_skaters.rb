@@ -4,6 +4,7 @@ class CreateSkaters < ActiveRecord::Migration[7.0]
       t.string :name
       t.string :stance
       t.string :sponsor
+      t.string :hometown
       t.string :profile
       t.string :full_shot
 
