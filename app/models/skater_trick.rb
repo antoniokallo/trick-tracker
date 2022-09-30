@@ -1,0 +1,2 @@
+class SkaterTrick < ApplicationRecord
+end
