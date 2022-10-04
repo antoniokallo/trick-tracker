@@ -20,7 +20,11 @@ Skater.create!([{
     name: "Eric Koston",
     stance: "Goofy",
     hometown: "San Bernadino, CA",
+<<<<<<< HEAD
     profile: "https://skateparkoftampa.com/spot/headshots/252.jpg",
+=======
+    profile: "https://www.google.com/url?sa=i&url=https%3A%2F%2Fskateparkoftampa.com%2Fskater%2F252%2FEric_Koston%2F%3FT%3DMugs&psig=AOvVaw3SK9oXVBddeG6Id-pPimpH&ust=1664649908441000&source=images&cd=vfe&ved=0CAsQjRxqFwoTCNjux6aWvfoCFQAAAAAdAAAAABAV",
+>>>>>>> 7003051 (onclick render)
     full_shot: "https://i.pinimg.com/originals/0d/d9/c0/0dd9c01d112a1c4bf0c4e7914e872ee8.jpg"
     },
     {
@@ -62,6 +66,7 @@ Skater.create!([{
 puts "Created #{Skater.count} skaters"
 
 Trick.create!([{
+<<<<<<< HEAD
     name: "Ollie"
 },
 {
@@ -81,12 +86,37 @@ Trick.create!([{
 },
 {
     name: "Nollie Lateflip"
+=======
+    name: "Ollie",
+    difficulty: 2
+},
+{
+    name: "BS Shuvit",
+    difficulty: 1
+},
+{
+    name: "Boneless",
+    difficulty: 2
+},
+{
+    name: "FS Shuvit",
+    difficulty: 4
+},
+{
+    name: "Kickflip",
+    difficulty: 4
+},
+{
+    name: "Tre flip",
+    difficulty: 8
+>>>>>>> 7003051 (onclick render)
 }
 
 
 
 ])
 
+<<<<<<< HEAD
 # SkaterTrick.create!([{
 #     skater_id: 3,
 #     trick_id: 7,
@@ -94,3 +124,6 @@ Trick.create!([{
 # }])
 # puts "Seeding done"
 
+=======
+puts "Seeding done"
+>>>>>>> 7003051 (onclick render)
