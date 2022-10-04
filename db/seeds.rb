@@ -20,7 +20,7 @@ Skater.create!([{
     name: "Eric Koston",
     stance: "Goofy",
     hometown: "San Bernadino, CA",
-    profile: "https://www.google.com/url?sa=i&url=https%3A%2F%2Fskateparkoftampa.com%2Fskater%2F252%2FEric_Koston%2F%3FT%3DMugs&psig=AOvVaw3SK9oXVBddeG6Id-pPimpH&ust=1664649908441000&source=images&cd=vfe&ved=0CAsQjRxqFwoTCNjux6aWvfoCFQAAAAAdAAAAABAV",
+    profile: "https://skateparkoftampa.com/spot/headshots/252.jpg",
     full_shot: "https://i.pinimg.com/originals/0d/d9/c0/0dd9c01d112a1c4bf0c4e7914e872ee8.jpg"
     },
     {
