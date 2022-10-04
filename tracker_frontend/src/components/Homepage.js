@@ -1,20 +1,31 @@
-import React from "react";
+import React, {useEffect, useState} from "react";
 import "./Homepage.css";
 import {Link} from "react-router-dom"
+import Data from "./Data";
+import Test from "./Test";
+import "./style.css"
  
-function homepage() {
+function Homepage() {
+const [skaters, setSkaters] = useState([])
+const [active, setActive] = useState("")
 
-  let fighters = ["bryan", "anna", 'feng', 'steve', 'hwoarang', 'jin', 'lars', 'paul', 'eddy', 'heihachi', 'kazuya', 'yoshimitsu']
+useEffect (() => {
+  const fetcher = () => {
+    fetch("http://localhost:3000/skaters")
+    .then (res => res.json()) 
+    .then (data => 
+      {setSkaters(data)
+      }
+    )}
+    fetcher()
+  }, [] )
 
   // Recreate the Fighters grid using this function
   
-  const fighterUrl = (name) => {
-    return 
-  }
-
 
   return (
     <>
+
     <nav id="nav">
     
       <div>skaters</div>
@@ -26,16 +37,19 @@ function homepage() {
     <h1 id="bg-title"></h1>
     <div id="fighters-grid">
       
-      {fighters.map((el, i) => {
-        return <div className="fighter-thumb"><img style={{height: '100px', width: '100px'}} src={fighterUrl(el)}  />
+      {skaters.map((skater, i) => {
+        return <div className="fighter-thumb"><img key={i} style={{height: '100px', width: '100px'}} src={skater.profile}
+        onClick={() => setActive("firstCard")}
+        />
         
         
         </div>
       })}
-
+     <button onClick={() => setActive("firstCard")}>two</button>
+    {active === "firstCard" && <Test data ={Data} cardIndex= {0}/> }
     </div>
     </>
   );
 }
 
-export default homepage;
+export default Homepage;
