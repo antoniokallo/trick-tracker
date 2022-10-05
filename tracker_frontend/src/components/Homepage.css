@@ -35,12 +35,13 @@
 
 #fighters-grid {
     float: left;
+    border: 100px ;
     margin-left: auto;
+    margin: 8px 0 0 20px;
     display: inline-flex;
     width: 528px;
     flex-wrap: wrap;
     gap: 10px;
-    margin: 10 auto;
     padding-top: 20%;
 }
 
