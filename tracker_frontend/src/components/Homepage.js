@@ -1,13 +1,17 @@
 import React, {useEffect, useState} from "react";
 import "./Homepage.css";
 import {Link} from "react-router-dom"
-import Data from "./Data";
-import Test from "./Test";
-import "./style.css"
+import Skaterpic from "./Skaterpic";
  
 function Homepage() {
 const [skaters, setSkaters] = useState([])
 const [active, setActive] = useState("")
+const [isShown, setIsShown] = useState(true);
+
+const handleClick = event => {
+  // 👇️ toggle visibility
+  setIsShown(current => !current);
+};
 
 useEffect (() => {
   const fetcher = () => {
@@ -26,28 +30,18 @@ useEffect (() => {
   return (
     <>
 
-    <nav id="nav">
-    
-      <div>skaters</div>
-
-      <div><img src="https://i.postimg.cc/ZY9T58HV/Screen-Shot-2022-09-30-at-2-52-05-PM.png" id="logo"/></div>
-      <div>Tricks</div>
-      
-    </nav>
-    <h1 id="bg-title"></h1>
+ 
     <div id="fighters-grid">
       
       {skaters.map((skater, i) => {
-        return <div className="fighter-thumb"><img key={i} style={{height: '100px', width: '100px'}} src={skater.profile}
-        onClick={() => setActive("firstCard")}
-        />
+        return <Skaterpic skater={skater} key={skater.id} setActive={setActive}/>
         
-        
-        </div>
+       
       })}
-     <button onClick={() => setActive("firstCard")}>two</button>
-    {active === "firstCard" && <Test data ={Data} cardIndex= {0}/> }
+     {/* <button onClick={() => setActive("firstCard")}>two</button>
+    {active === "firstCard" && <Test data ={Data} cardIndex= {0}/> } */}
     </div>
+    <img src={active.full_shot}className="card" style={{display: isShown ? 'block' : 'none'}}/>
     </>
   );
 }
