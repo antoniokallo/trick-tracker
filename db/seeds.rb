@@ -117,6 +117,7 @@ Trick.create!([{
 ])
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 # SkaterTrick.create!([{
 #     skater_id: 3,
 #     trick_id: 7,
@@ -127,3 +128,10 @@ Trick.create!([{
 =======
 puts "Seeding done"
 >>>>>>> 7003051 (onclick render)
+=======
+puts "Seeding done"
+=======
+puts "Seeding done"
+
+>>>>>>> bb6d9d2 (working seed file for skaters and tricks)
+>>>>>>> 8b4ba63 (merge conflicts resolved)
