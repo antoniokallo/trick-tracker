@@ -1,0 +1,19 @@
+@import url('https://fonts.googleapis.com/css2?family=Bungee+Spice&display=swap');
+
+.tricks{
+    font-family: 'Bungee Spice', cursive;
+    text-shadow: 2px 2px 8px #000000;
+    margin-top: 10%;
+    margin-left: 25%;
+    margin-right: auto;
+    
+
+}
+.difficulty{
+    
+    margin-left: 57%;
+}
+.text{
+    display: inline-flex;
+    margin-left: 50%;
+}

@@ -13,6 +13,3 @@ body{
   background-position: 50% 50%;
   background-size: cover;
 }
-#grad {
-  background-image: linear-gradient(to bottom right, red, yellow);
-}

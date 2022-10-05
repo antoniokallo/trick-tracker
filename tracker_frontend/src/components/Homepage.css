@@ -33,7 +33,7 @@
 
 
 
-#fighters-grid {
+#skater-grid {
     float: left;
     border: 100px ;
     margin-left: auto;
@@ -45,30 +45,36 @@
     padding-top: 20%;
 }
 
-.fighter-thumb {
+.skater-thumb {
     height: 100px;
     width: 100px;
     transition: transform 0.2s, border 0.2s;
     border: 2px solid transparent;
-    background-color: #F6C444;
+    background-color: #ebfd63;
     
 }
 
-.fighter-thumb:hover {
+.skater-thumb:hover {
     transform: scale(1.15);
-    border: 2px solid orange;
+    border: 5px solid rgb(255, 255, 141);
     cursor: pointer;
-    box-shadow: 1px 3px 40px #FFBB59;
+    box-shadow: 10px 30px 40px #e0f955;
 }
 .card{
     display: block;
     margin-right: auto;
     margin-left: auto;
-    width: 20%;
-    height: 20%;
+    width: 30%;
+    height: 30%;
    
     padding-top: 10%;
     transition: transform 0.2s, border 0.2s;
     margin: 0 auto;
+    transition: width 2s, height 2s, background-color 2s, transform 2s;
 }
 
+.card:hover {
+    width: 200px;
+    height: 200px;
+    transform: rotate(90deg);
+  }
