@@ -62,33 +62,35 @@ Skater.create!([{
 puts "Created #{Skater.count} skaters"
 
 Trick.create!([{
-    name: "Ollie",
-    difficulty: 2
+    name: "Ollie"
 },
 {
-    name: "BS Shuvit",
-    difficulty: 1
+    name: "BS Shuvit"
 },
 {
-    name: "Boneless",
-    difficulty: 2
+    name: "Boneless"
 },
 {
-    name: "FS Shuvit",
-    difficulty: 4
+    name: "FS Shuvit"
 },
 {
-    name: "Kickflip",
-    difficulty: 4
+    name: "Kickflip"
 },
 {
-    name: "Tre flip",
-    difficulty: 8
+    name: "Tre flip"
+},
+{
+    name: "Nollie Lateflip"
 }
 
 
 
 ])
 
-puts "Seeding done"
+# SkaterTrick.create!([{
+#     skater_id: 3,
+#     trick_id: 7,
+#     video_link: "https://www.youtube.com/watch?v=qe9YQzonGrk"
+# }])
+# puts "Seeding done"
 
