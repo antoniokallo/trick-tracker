@@ -1,7 +1,7 @@
 class SkatersController < ApplicationController
     def index
         skaters = Skater.all
-        render json: skaters 
+        render json: skaters
     end
     def show 
         skater = Skater.find(params[:id])

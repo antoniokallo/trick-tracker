@@ -5,6 +5,7 @@ class SkaterTricksController < ApplicationController
     end
 
 
+
     private
 
     def skatertrick_params
