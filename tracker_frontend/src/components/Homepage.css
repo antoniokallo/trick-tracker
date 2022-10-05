@@ -1,0 +1,71 @@
+#nav {
+    background-color: #E9AF1B;
+    position: fixed;
+    width: 100%;
+    display: flex;
+    top: 0;
+    left: 0;
+    height: 70px;
+    justify-content: center;
+    align-items: center;
+    
+}
+
+#nav div {
+    text-transform: uppercase;
+    font-weight: bold;
+    letter-spacing: -1px;
+    margin: 0 1.5%;
+    color: white;
+}
+
+#nav div:hover {
+    border-bottom: 2px solid #F67D44;
+    cursor: pointer;
+    color: #F67D44;
+}
+
+
+#logo {
+    width: 280px;
+    height: auto;
+}
+
+#bg-title {
+    position: absolute;
+    color: gray;
+    font-size: 20.5em;
+    text-align: center;
+    margin: 0;
+    top: 6%;
+    height: auto;
+    z-index:  -1;
+    opacity: 0.1;
+    letter-spacing: -26px;
+    width: 100%;
+}
+#fighters-grid {
+    
+    display: inline-flex;
+    width: 528px;
+    flex-wrap: wrap;
+    gap: 8px;
+    margin: 0 auto;
+    padding-top: 10%;
+}
+
+.fighter-thumb {
+    height: 100px;
+    width: 100px;
+    transition: transform 0.2s, border 0.2s;
+    border: 2px solid transparent;
+    background-color: #F6C444;
+    
+}
+
+.fighter-thumb:hover {
+    transform: scale(1.15);
+    border: 2px solid orange;
+    cursor: pointer;
+    box-shadow: 1px 3px 40px #FFBB59;
+}
