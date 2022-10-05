@@ -1,5 +1,4 @@
 class SkatersController < ApplicationController
-<<<<<<< HEAD
     def index
         skaters = Skater.all
         render json: skaters 
@@ -27,9 +26,5 @@ class SkatersController < ApplicationController
     private
     def skater_params
         params.permit(:name, :stance, :hometown, :profile, :full_shot)
-=======
-    def index 
-        render json: Skater.all
->>>>>>> 7003051 (onclick render)
     end
 end
