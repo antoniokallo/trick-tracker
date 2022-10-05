@@ -26,5 +26,6 @@ class SkatersController < ApplicationController
     private
     def skater_params
         params.permit(:name, :stance, :hometown, :profile, :full_shot)
+
     end
 end

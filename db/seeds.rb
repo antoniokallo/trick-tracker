@@ -62,6 +62,7 @@ Skater.create!([{
 puts "Created #{Skater.count} skaters"
 
 Trick.create!([{
+
     name: "Ollie"
 },
 {
@@ -81,6 +82,29 @@ Trick.create!([{
 },
 {
     name: "Nollie Lateflip"
+=======
+    name: "Ollie",
+    difficulty: 2
+},
+{
+    name: "BS Shuvit",
+    difficulty: 1
+},
+{
+    name: "Boneless",
+    difficulty: 2
+},
+{
+    name: "FS Shuvit",
+    difficulty: 4
+},
+{
+    name: "Kickflip",
+    difficulty: 4
+},
+{
+    name: "Tre flip",
+    difficulty: 8
 }
 
 
@@ -94,5 +118,5 @@ Trick.create!([{
 # }])
 # puts "Seeding done"
 
->>>>>>> bb6d9d2 (working seed file for skaters and tricks)
->>>>>>> 8b4ba63 (merge conflicts resolved)
+puts "Seeding done"
+
