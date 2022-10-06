@@ -4,6 +4,16 @@ class SkaterTricksController < ApplicationController
         render json: skatertrick.trick, status: :created
     end
 
+    def destroy
+        @skater_trick.destroy
+        head :no_content
+    end
+
+    def update
+        @skater_trick.update!(skatertrick_params)
+        render json: @skater_trick, status: :accepted
+    end
+
 
 
     private
