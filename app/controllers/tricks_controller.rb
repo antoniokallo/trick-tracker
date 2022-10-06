@@ -6,6 +6,7 @@ class TricksController < ApplicationController
     end
 
 
+
     def create
         trick = Trick.create!(trick_params)
         render json: trick, status: :created
