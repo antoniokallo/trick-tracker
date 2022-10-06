@@ -99,17 +99,17 @@ SkaterTrick.create!([
 {
     skater_id: Skater.find_by(name: 'Paul Rodriguez').id,
     trick_id: Trick.find_by(name: 'Nollie Lateflip').id,
-    video_link: "https://www.youtube.com/watch?v=qe9YQzonGrk"
+    video_link: "https://www.youtube.com/embed/qe9YQzonGrk"
 },
 {
     skater_id: Skater.find_by(name: 'Yuto Horigome').id,
     trick_id: Trick.find_by(name: 'Ollie').id,
-    video_link: "https://www.youtube.com/watch?v=qe9YQzonGrk"
+    video_link: "https://www.youtube.com/embed/qe9YQzonGrk"
 },
 {
     skater_id: Skater.find_by(name: 'Yuto Horigome').id,
     trick_id: Trick.find_by(name: 'Kickflip').id,
-    video_link: "https://www.youtube.com/watch?v=qe9YQzonGrk"
+    video_link: "https://www.youtube.com/embed/kFZkUwgbIW4"
 }
 
 
