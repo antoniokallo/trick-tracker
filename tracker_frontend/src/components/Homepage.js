@@ -37,6 +37,7 @@ useEffect (() => {
      {/* <button onClick={() => setActive("firstCard")}>two</button>
     {active === "firstCard" && <Test data ={Data} cardIndex= {0}/> } */}
     </div>
+    <h1 className="Cardname"> {active.name}</h1>
     <img src={active.full_shot}className="card"/>
     </>
   );

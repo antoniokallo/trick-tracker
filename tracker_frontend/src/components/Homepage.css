@@ -1,3 +1,6 @@
+@import url('https://fonts.googleapis.com/css2?family=Bungee+Spice&display=swap');
+
+
 #nav {
     background-color: #E9AF1B;
     position: fixed;
@@ -34,15 +37,12 @@
 
 
 #skater-grid {
-    float: left;
-    border: 100px ;
-    margin-left: auto;
-    margin: 8px 0 0 20px;
-    display: inline-flex;
-    width: 528px;
+    display: flex;
+    width: 428px;
     flex-wrap: wrap;
-    gap: 10px;
-    padding-top: 20%;
+    gap: 8px;
+    margin: 0 auto;
+    padding-top: 10%;
 }
 
 .skater-thumb {
@@ -61,20 +61,56 @@
     box-shadow: 10px 30px 40px #e0f955;
 }
 .card{
+    
     display: block;
+
     margin-right: auto;
+    
     margin-left: auto;
-    width: 30%;
-    height: 30%;
+    
+    width: 25%;
+    
+    height: 25%;
    
-    padding-top: 10%;
+    padding-top: 1%;
+    
     transition: transform 0.2s, border 0.2s;
-    margin: 0 auto;
-    transition: width 2s, height 2s, background-color 2s, transform 2s;
+    
+    margin: auto;
+        
+    border-radius: 100px;
+    
+    justify-content: center;
+    
+}
+.card:hover{
+    border: 5px solid rgb(255, 255, 141);
+    box-shadow: 10px 30px 40px #e0f955;
 }
 
-.card:hover {
+.Cardname{
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 40%;
+    font-family: 'Bungee Spice', cursive;
+    text-shadow: 2px 2px 8px #000000;
+    padding-top: 1%;
+
+    /* transition: all.2s ease-in-out;   */
+    text-align: center;
+   
+}
+/* .Cardname:hover{
+    text-align: center;
+    transform: scale(0.7); /* Equal to scaleX(0.7) scaleY(0.7) */
+    /* background-color: pink;
+}
+     */
+ 
+
+/* .Cardname:hover {
     width: 200px;
     height: 200px;
     transform: rotate(90deg);
-  }
+  } */
