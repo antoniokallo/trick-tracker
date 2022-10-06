@@ -25,7 +25,7 @@ useEffect (() => {
 
 return(
 
-<div className="skaterdetails">
+<div className="card">
 {skaters.map((skater, i) => {
        
         return  <Skaterdetails skater={skater} key={skater.id} />      
