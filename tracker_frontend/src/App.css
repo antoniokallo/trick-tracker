@@ -9,7 +9,7 @@ body{
   font-family: sans-serif;
   box-sizing: border-box;
   height: 150vh;
-  background-image: linear-gradient(to bottom right, red, yellow);
+  background-image: linear-gradient(to bottom right, red, #ffff00);
   background-position: 50% 50%;
   background-size: cover;
 }

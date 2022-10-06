@@ -9,7 +9,7 @@ import Trickdetails from "./Trickdetails"
 
 export default function Trickinfo() {
     const [tricks, setTricks] = useState([])
-    const [active, setActive] = useState("")
+    const [active, setActive] = useState([])
 
     useEffect (() => {
         const fetcher = () => {
@@ -22,6 +22,15 @@ export default function Trickinfo() {
           fetcher()
         }, [] )
 
+        // for(let i=0; i < active.add_tricks.length; i++){
+
+      
+
+        // let name = active.add_tricks.i.name
+        // let link = active.add_skater_tricks.i.name
+        // return <Trickinfo 
+
+        // }
 
 return (
 <div className="tricks">

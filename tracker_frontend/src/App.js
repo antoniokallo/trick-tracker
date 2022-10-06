@@ -12,18 +12,18 @@ function App() {
     <div className="App">
          <nav id="nav">
     
-    <div>
+
+
+    <div className='active'>
+      <Link to="/">
+      <img src="https://i.postimg.cc/1zLr2dYr/Untitled-Artwork-4.png" id="logo"/>
+      </Link>
+      </div>
+      <div>
       <Link to='/Skaterinfo'>
       skaters
       </Link>
       </div>
-
-    <div>
-      <Link to="/">
-      <img src="https://i.postimg.cc/ZY9T58HV/Screen-Shot-2022-09-30-at-2-52-05-PM.png" id="logo"/>
-      </Link>
-      </div>
-   
     <div>
       <Link to="/Trickinfo">TRICKS</Link>
     </div>
