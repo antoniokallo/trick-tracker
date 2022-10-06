@@ -5,8 +5,44 @@ import Skaterpic from "./Skaterpic";
 import Trickdetails from "./Trickdetails";
  
 function Homepage() {
+  const [firstVideo, setFirstVideo] = useState('')
+  const [clicked, setClicked] = useState(false)
 const [skaters, setSkaters] = useState([])
-const [active, setActive] = useState({})
+const [active, setActive] = useState({
+  "id": "",
+  "stance": "",
+  "sponsor": null,
+  "hometown": "",
+  "profile": "",
+  "add_skater_tricks": [
+  {
+  "id": '',
+  "skater_id": '',
+  "trick_id": '',
+  "video_link": "",
+  "created_at": "",
+  "updated_at": ""
+  },
+  {
+  "id": '',
+  "skater_id": '',
+  "trick_id": '',
+  "video_link": "",
+  }
+  ],
+  "add_tricks": [
+  {
+  "id": '',
+  "name": "",
+  "difficulty": "",
+  },
+  {
+  "id": '',
+  "name": "",
+  "difficulty": "",
+  }
+  ]
+  })
 
 // console.log(active)
 
@@ -24,10 +60,29 @@ useEffect (() => {
 
   // Recreate the Fighters grid using this function
 
+  // useEffect(() => {
+
+  //   if(skaters.add_skater_tricks) {
+  //     let video = skaters.add_skater_tricks.filter((el, i) => {
+  //       return el.trick_id = trick.id
+  //      })
+  //      setFirstVideo(video)
+  //   }
+  // },[skaters.add_skater_tricks])
+  function handleClick(trick) {
+
+   let video = active.add_skater_tricks.filter((el, i) => {
+    return el.trick_id == trick.id
+   })
+   console.log(video)
+
+  setFirstVideo(video[0].video_link)
+  }
+  
 function renderTrick () {
   if (active.add_tricks){
     return active.add_tricks.map((trick) => {
-    return  (<h2 className="trickTitle"> <li>{trick.name} </li></h2>)
+    return  (<h2 onClick={() => handleClick(trick)} className="trickTitle"> <ul >{trick.name} </ul></h2>)
  })
 }
 }
@@ -36,7 +91,7 @@ let render = renderTrick()
 
 useEffect(() => {
   render = renderTrick()
-  console.log(render)
+  // console.log(render)
 }, [active])
 
   return (
@@ -47,7 +102,7 @@ useEffect(() => {
       
       {skaters.map((skater, i) => {
        
-        return <Skaterpic skater={skater} key={skater.id} setActive={setActive}/>
+        return <Skaterpic skater={skater} key={skater.id} setFirstVideo={setFirstVideo} setActive={setActive}/>
         
     
       })}
@@ -62,22 +117,27 @@ useEffect(() => {
     {active === "firstCard" && <Test data ={Data} cardIndex= {0}/> } */}
     </div>
     <h1 className="Cardname"> {active.name}</h1>
-  <img src={active.full_shot}className="card"/>
-    <div className="sk8"> 
-      {render}
-   </div>
-   <div className="YTvideo">
+    <div className="parent">
+  
+ 
+  <div className="YTvideo">
    <iframe
-      width="853"
-      height="480"
-      // src={active.add_skater_tricks}
+   height="500px"
+   width= '800px'
+      src={firstVideo}
       frameBorder="0"
       allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
       allowFullScreen
       title="Embedded youtube"
     />
-
+</div>
+<img src={active.full_shot}className="card"/>
+<div className="sk8" > 
+      {render}
    </div>
+   </div>
+ 
+
     </>
   );
 }

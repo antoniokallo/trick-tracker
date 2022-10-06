@@ -1,8 +1,20 @@
-.skaters{
+.skaterdetails{
+    display: inline-block;
 
-    text-shadow: 2px 2px 8px #000000;
-    margin-top: 10%;
-    margin-left: 30%;
     margin-right: auto;
-
+    
+    margin-left: auto;
+    
+    width: 25%;
+    
+    height: 25%;
+    
+    transition: transform 0.2s, border 0.2s;
+    
+    margin: auto;
+        
+    border-radius: 50px;
+    
+    justify-content: center;
+    
 }
