@@ -110,8 +110,27 @@ SkaterTrick.create!([
     skater_id: Skater.find_by(name: 'Yuto Horigome').id,
     trick_id: Trick.find_by(name: 'Kickflip').id,
     video_link: "https://www.youtube.com/embed/kFZkUwgbIW4"
+},
+{
+    skater_id: Skater.find_by(name: 'Eric Koston').id,
+    trick_id: Trick.find_by(name: 'Tre flip').id,
+    video_link: "https://www.youtube.com/embed/qe9YQzonGrk"
+},
+{
+    skater_id: Skater.find_by(name: 'Sean Malto').id,
+    trick_id: Trick.find_by(name: 'BS Shuvit').id,
+    video_link: "https://www.youtube.com/embed/qe9YQzonGrk"
+},
+{
+    skater_id: Skater.find_by(name: 'Mason Silva').id,
+    trick_id: Trick.find_by(name: 'Boneless').id,
+    video_link: "https://www.youtube.com/embed/qe9YQzonGrk"
+},
+{
+    skater_id: Skater.find_by(name: 'Jaws').id,
+    trick_id: Trick.find_by(name: 'Ollie').id,
+    video_link: "https://www.youtube.com/embed/qe9YQzonGrk"
 }
-
 
 ])
 

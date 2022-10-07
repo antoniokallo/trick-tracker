@@ -4,10 +4,6 @@ import './Skaterinfo.css'
 
 import "./Skaterinfo.css"
 
-
-
-
-
 export default function Skaterinfo() {
 
   const [skaters, setSkaters] = useState([])
@@ -23,7 +19,11 @@ useEffect (() => {
     fetcher()
   }, [] )
 
+
+  
+
 return(
+ 
 
 <div className="card">
 {skaters.map((skater, i) => {
@@ -32,7 +32,15 @@ return(
             
      
       })}
-      
+       <div>
+<form>
+  <label>
+<input type="text" classname="Cardname" placeholder="enter name" name="name"/>
+</label>
+<input />
+<input />
+</form>
+</div>
       </div>
       );
     }
