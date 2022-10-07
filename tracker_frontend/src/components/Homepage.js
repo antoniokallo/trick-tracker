@@ -6,7 +6,7 @@ import Trickdetails from "./Trickdetails";
  
 function Homepage() {
   const [firstVideo, setFirstVideo] = useState('')
-  const [clicked, setClicked] = useState(false)
+  const [clicked, setClicked] = useState([])
 const [skaters, setSkaters] = useState([])
 const [active, setActive] = useState({
   "id": "",
@@ -82,7 +82,7 @@ useEffect (() => {
 function renderTrick () {
   if (active.add_tricks){
     return active.add_tricks.map((trick) => {
-    return  ( <div className="sk8"><h2 onClick={() => handleClick(trick)} className="trickTitle"> <ul >{trick.name} </ul></h2></div>)
+    return  ( <div className ><h2 onClick={() => handleClick(trick)} className="trickTitle"> {trick.name} </h2></div>)
  })
 }
 }
@@ -93,6 +93,7 @@ useEffect(() => {
   render = renderTrick()
   // console.log(render)
 }, [active])
+
 
   return (
     <>
@@ -132,9 +133,12 @@ useEffect(() => {
     />
 </div>
 <img src={active.full_shot}className="card"/>
-<div > 
+{active.id != "" ?
+( <div className="sk8" > 
       {render}
-   </div>
+   </div> ): null }
+
+
    </div>
  
 
