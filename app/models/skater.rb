@@ -4,7 +4,7 @@ class Skater < ApplicationRecord
 
 
     def add_skater_tricks
-        self.skater_tricks
+       self.skater_tricks
     end
     def add_tricks
         self.tricks
