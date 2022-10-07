@@ -4,6 +4,13 @@ class SkaterTricksController < ApplicationController
         render json: skatertrick.trick, status: :created
     end
 
+    def index
+        
+            skatertricks = SkaterTrick.all
+            render json: skaters
+    
+    end
+
     def destroy
         @skater_trick.destroy
         head :no_content

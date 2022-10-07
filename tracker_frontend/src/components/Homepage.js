@@ -82,7 +82,7 @@ useEffect (() => {
 function renderTrick () {
   if (active.add_tricks){
     return active.add_tricks.map((trick) => {
-    return  (<h2 onClick={() => handleClick(trick)} className="trickTitle"> <ul >{trick.name} </ul></h2>)
+    return  ( <div className="sk8"><h2 onClick={() => handleClick(trick)} className="trickTitle"> <ul >{trick.name} </ul></h2></div>)
  })
 }
 }
@@ -123,7 +123,7 @@ useEffect(() => {
   <div className="YTvideo">
    <iframe
    height="500px"
-   width= '800px'
+   width= '500px'
       src={firstVideo}
       frameBorder="0"
       allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
@@ -132,7 +132,7 @@ useEffect(() => {
     />
 </div>
 <img src={active.full_shot}className="card"/>
-<div className="sk8" > 
+<div > 
       {render}
    </div>
    </div>

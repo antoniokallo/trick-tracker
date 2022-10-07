@@ -6,6 +6,18 @@ import "./Skaterinfo.css"
 
 export default function Skaterinfo() {
 
+
+  const [formData, setFormData] = useState({
+name: "",
+Image: "",
+profile: "",
+  })
+  const formChange = (e) => {
+    setFormData({
+      ...formData,
+      [e.target.name]: e.target.value
+    })
+  }
   const [skaters, setSkaters] = useState([])
 
 useEffect (() => {
@@ -19,28 +31,36 @@ useEffect (() => {
     fetcher()
   }, [] )
 
+const handleSubmit = (e) =>{
+  e.preventDefault()
+  console.log(formData)
+}
+const createSkater = async() => {
+  let req = await fetch("http://localhost:3000/skaters", {
+    method: "POST",
+    headers:{
+      "Content-Type":"applications/json" 
+    },
+    body: JSON.stringify(formData)
+  })
+  let res = await req.json()
+  createSkater(res)
+}
 
   
 
 return(
  
 
-<div className="card">
+<div className="ah">
+
 {skaters.map((skater, i) => {
        
         return  <Skaterdetails skater={skater} key={skater.id} />      
             
      
       })}
-       <div>
-<form>
-  <label>
-<input type="text" classname="Cardname" placeholder="enter name" name="name"/>
-</label>
-<input />
-<input />
-</form>
-</div>
+  
       </div>
       );
     }
