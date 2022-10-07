@@ -1,7 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Bungee+Spice&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Permanent+Marker&display=swap');
-
-
+@import url('https://fonts.googleapis.com/css2?family=Trade+Winds&display=swap');
 #nav {
     background-image: transparent;
     border-radius: 50px;
@@ -171,4 +170,17 @@ font-size: 50px;
     width: 50%;
     justify-content: center;
     border-radius: 100px;
+}
+.descriptionCard{
+    display: inline-flex;
+}
+.Sk8rDescription{
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 40%;
+    font-family: 'Trade Winds', cursive;
+    text-shadow: 2px 2px 8px #000000;
+    margin-bottom: 1%;
+
 }

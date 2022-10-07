@@ -57,6 +57,7 @@ useEffect (() => {
     )}
     fetcher()
   }, [] )
+  console.log(skaters)
 
   // Recreate the Fighters grid using this function
 
@@ -74,7 +75,6 @@ useEffect (() => {
    let video = active.add_skater_tricks.filter((el, i) => {
     return el.trick_id == trick.id
    })
-   console.log(video)
 
   setFirstVideo(video[0].video_link)
   }
@@ -93,7 +93,6 @@ useEffect(() => {
   render = renderTrick()
   // console.log(render)
 }, [active])
-
 
   return (
     <>

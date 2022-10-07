@@ -102,7 +102,20 @@ Trick.create!([
 {
     name: "Nollie Lateflip",
     difficulty: 8
+},
+{
+    name: "FS pop shuv, Late backfoot hardflip",
+    difficulty: 10
+},
+{
+    name: "Gnarly slam",
+    difficulty: 10
+},
+{
+    name: "Ender",
+    difficulty: 10
 }
+
 
 
 
@@ -131,7 +144,7 @@ SkaterTrick.create!([
 },
 {
     skater_id: Skater.find_by(name: 'Sean Malto').id,
-    trick_id: Trick.find_by(name: 'BS Shuvit').id,
+    trick_id: Trick.find_by(name: 'FS pop shuv, Late backfoot hardflip').id,
     video_link: "https://www.youtube.com/embed/dMpy9IpDrDA"
 },
 {
@@ -148,7 +161,50 @@ SkaterTrick.create!([
     skater_id: Skater.find_by(name: 'Nyjah Huston').id,
     trick_id: Trick.find_by(name: 'FS Shuv nosegrind').id,
     video_link: "https://www.youtube.com/embed/fqe0Gf77gfs"
+},
+{
+    skater_id: Skater.find_by(name: 'Jaws').id,
+    trick_id: Trick.find_by(name: "Kickflip").id,
+    video_link: "https://www.youtube.com/embed/JiE35KJ2Rj8?start=25"
+},
+
+{
+    skater_id: Skater.find_by(name: 'Jaws').id,
+    trick_id: Trick.find_by(name: "Gnarly slam").id,
+    video_link: "https://www.youtube.com/embed/4GFIXrybfKg?start=5"
+},
+{
+    skater_id: Skater.find_by(name: 'Nyjah Huston').id,
+    trick_id: Trick.find_by(name: "Gnarly slam").id,
+    video_link: "https://www.youtube.com/embed/uzG_-PYZT-4?start=50"
+},
+{
+    skater_id: Skater.find_by(name: 'Sean Malto').id,
+    trick_id: Trick.find_by(name: "Gnarly slam").id,
+    video_link: "https://www.youtube.com/embed/G3ee60P1zIk?start=36"
+},
+{
+    skater_id: Skater.find_by(name: 'Eric Koston').id,
+    trick_id: Trick.find_by(name: "Gnarly slam").id,
+    video_link: "https://www.youtube.com/embed/VZwIsmI6b00?start=36"
+},
+{
+    skater_id: Skater.find_by(name: 'Yuto Horigome').id,
+    trick_id: Trick.find_by(name: "Ender").id,
+    video_link: "https://www.youtube.com/embed/hqyTRfVtQyw?start=138"
+},
+{
+    skater_id: Skater.find_by(name: 'Mason Silva').id,
+    trick_id: Trick.find_by(name: "Gnarly slam").id,
+    video_link: "https://www.youtube.com/embed/7ZxlCVTPNng?start=192"
+},
+{
+    skater_id: Skater.find_by(name: 'Mason Silva').id,
+    trick_id: Trick.find_by(name: "Ender").id,
+    video_link: "https://www.youtube.com/embed/7ZxlCVTPNng?start=321"
 }
+
+
 ])
 
 puts "Seeding done"
