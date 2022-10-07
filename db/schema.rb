@@ -26,13 +26,14 @@ ActiveRecord::Schema[7.0].define(version: 2022_10_06_205813) do
     t.string "hometown"
     t.string "profile"
     t.string "full_shot"
+    t.string "description"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
 
   create_table "tricks", force: :cascade do |t|
     t.string "name"
-    t.string "difficulty"
+    t.integer "difficulty"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end

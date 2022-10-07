@@ -123,8 +123,9 @@ useEffect(() => {
  
   <div className="YTvideo">
    <iframe
-   height="500px"
-   width= '500px'
+   height="100%"
+   width= '100%'
+   border = "100px"
       src={firstVideo}
       frameBorder="0"
       allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"

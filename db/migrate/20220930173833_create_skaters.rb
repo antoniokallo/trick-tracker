@@ -7,6 +7,7 @@ class CreateSkaters < ActiveRecord::Migration[7.0]
       t.string :hometown
       t.string :profile
       t.string :full_shot
+      t.string :description
 
       t.timestamps
     end

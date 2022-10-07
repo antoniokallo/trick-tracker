@@ -3,7 +3,8 @@
 
 
 #nav {
-    background-color: transparent;
+    background-image: transparent;
+    border-radius: 50px;
     position: sticky;
     width: 100%;
     display: flex;
@@ -16,6 +17,7 @@
 }
 
 #nav div {
+    padding-top: 10%;
     text-transform: uppercase;
     font-weight: bold;
     letter-spacing: -1px;
@@ -33,10 +35,11 @@
 }
 
 #nav div:hover {
-    border-bottom: 2px solid yellow;
+    transition: ease-out 0.7s;
     cursor: pointer;
     color: white;
-    font-size: 21px;
+    font-size: 100px;
+    border-radius: 200px;
     
 }
 
@@ -165,6 +168,7 @@ font-size: 50px;
 }
 
 .YTvideo{
-    width: 500px;
+    width: 50%;
     justify-content: center;
+    border-radius: 100px;
 }
