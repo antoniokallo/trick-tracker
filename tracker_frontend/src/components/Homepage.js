@@ -3,11 +3,13 @@ import "./Homepage.css";
 import {Link} from "react-router-dom"
 import Skaterpic from "./Skaterpic";
 import Trickdetails from "./Trickdetails";
+import SkaterTrickInfo from "./SkaterTrickInfo";
  
 function Homepage() {
   const [firstVideo, setFirstVideo] = useState('')
   const [clicked, setClicked] = useState(false)
 const [skaters, setSkaters] = useState([])
+const [videoID, setVideoID] = useState([])
 const [active, setActive] = useState({
   "id": "",
   "stance": "",
@@ -77,12 +79,39 @@ useEffect (() => {
    console.log(video)
 
   setFirstVideo(video[0].video_link)
+  setVideoID(video[0].id)
+  console.log(videoID)
   }
-  
+
+  // function handleEdit(trick) {
+
+  //   console.log(active.add_skater_tricks.filter((el, i) => {
+  //     return el.trick_id == trick.id
+  //    }))
+  // }
+  // function handleUpdateFirstVideo(firstVideo){
+  //   setIsEditing(false);
+  //   firstVideo[0].video_link=videoBody;
+  //   // onUpdateFirstVideo(updatedVideo);
+  // }
 function renderTrick () {
   if (active.add_tricks){
     return active.add_tricks.map((trick) => {
-    return  (<h2 onClick={() => handleClick(trick)} className="trickTitle"> <ul >{trick.name} </ul></h2>)
+    return  (
+      <SkaterTrickInfo videoID={videoID} trick={trick} active={active} handleClick={handleClick} />
+//     <h2>
+
+// {isEditing?(<EditSkaterTrick active={active}trick={trick}video={firstVideo} setFirstVideo={setFirstVideo} onUpdateFirstVideo={handleUpdateFirstVideo} videoBody={videoBody} setVideoBody={setVideoBody}/>) :(<ul  onClick={() => handleClick(trick)} className="trickTitle">{trick.name}</ul>)}
+//   <button onClick={() => setIsEditing((isEditing) => !isEditing)}>
+//         ✏️
+//       </button>
+//       <button>
+//         🗑️
+//       </button>
+//       </h2>
+
+
+      )
  })
 }
 }
@@ -102,7 +131,7 @@ useEffect(() => {
       
       {skaters.map((skater, i) => {
        
-        return <Skaterpic skater={skater} key={skater.id} setFirstVideo={setFirstVideo} setActive={setActive}/>
+        return <Skaterpic  skater={skater} key={skater.id} setFirstVideo={setFirstVideo} setActive={setActive}/>
         
     
       })}

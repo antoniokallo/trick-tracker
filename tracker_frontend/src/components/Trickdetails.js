@@ -1,6 +1,9 @@
 import React from 'react'
+import {useState, useEffect} from 'react'
 
 export default function Trickdetails({ trick, setActive}) {
+
+
 
   return (
     // console.log(trick.trick)

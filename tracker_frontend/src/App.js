@@ -4,6 +4,7 @@ import {Routes, Route, Link} from "react-router-dom";
 import React from 'react';
 import Trickinfo from './components/Trickinfo';
 import Skaterinfo from './components/Skaterinfo';
+import Loginform from './components/Loginform';
 
 
 function App() {
@@ -27,6 +28,10 @@ function App() {
     <div>
       <Link to="/Trickinfo">TRICKS</Link>
     </div>
+    <div>
+      <Link to="/Loginform">Login</Link>
+    </div>
+
     
   </nav>
 
@@ -35,6 +40,7 @@ function App() {
   <Route path='/' element={<Homepage/>} />
 <Route path='Trickinfo' element={<Trickinfo/>} />
 <Route path="Skaterinfo" element={<Skaterinfo/>} />
+<Route path="Loginform" element={<Loginform/>} />
 </Routes>
     </div>
 

@@ -1,17 +1,29 @@
 class SkaterTricksController < ApplicationController
     def create
         skatertrick = SkaterTrick.create!(skatertrick_params)
-        render json: skatertrick.trick, status: :created
+        render json: skatertrick, status: :created
     end
 
     def destroy
-        @skater_trick.destroy
+        skatertrick = SkaterTrick.find_by!(params[:id])
+        skatertrick.destroy
         head :no_content
     end
 
     def update
-        @skater_trick.update!(skatertrick_params)
-        render json: @skater_trick, status: :accepted
+        skatertrick = SkaterTrick.find_by!(params[:id])
+        skatertrick.update(skatertrick_params)
+        render json: skatertrick, status: :accepted
+        
+    end
+
+    def index
+        skatertricks = SkaterTrick.all
+        render json: skatertricks
+    end
+    def show 
+        skatertrick = SkaterTrick.find(params[:id])
+        render json: skatertrick
     end
 
 
@@ -19,6 +31,6 @@ class SkaterTricksController < ApplicationController
     private
 
     def skatertrick_params
-    params.permit(:skater_id, :trick_id, :video_link)
+    params.permit(:video_link)
     end
 end

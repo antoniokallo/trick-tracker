@@ -1,18 +1,4 @@
 class ApplicationController < ActionController::API
-<<<<<<< HEAD
-  # before_action :require_login
-  # helper_method :current_user
-
-  # def require_login
-  #   redirect_to new_session_path unless session.include? :user_id
-  # end
-
-  # def current_user
-  #   @current_user ||= User.find(session[:user_id]) if session[:user_id]
-  # end
-
-end
-=======
 
     rescue_from ActiveRecord::RecordNotFound, with: :render_not_found_response
     rescue_from ActiveRecord::RecordInvalid, with: :render_unprocessable_entity_response
@@ -40,4 +26,3 @@ end
     end
 
 end
->>>>>>> 66639a7130722bf7e014b980a1d3c0147078269d
